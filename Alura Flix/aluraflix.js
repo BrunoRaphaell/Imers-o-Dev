@@ -24,12 +24,12 @@ const filmes = [
     {href: "https://www.imdb.com/title/tt8079248/", imagem: "https://br.web.img2.acsta.net/pictures/19/07/23/20/57/4907896.jpg"}
 ]
 
-
-var listaFilmes = removeDuplicates(filmes)
+var listaFilmesUnicos = removeDuplicates([...filmes])
 
 console.log(filmes)
 
-for (var i = 0; i < listaFilmes.length; i++) {
-    document.write("<a href='" + listaFilmes[i].href + "'>" + "<img src='" + listaFilmes[i].imagem + "'>" + "</a>")
+ for (var i = 0; i < listaFilmesUnicos.length; i++) {
+    document.write("<a href='" + listaFilmesUnicos[i].href + "'>" + "<img src='" + listaFilmesUnicos[i].imagem + "'>" + "</a>")
 }
+
 
