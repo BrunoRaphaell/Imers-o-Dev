@@ -4,13 +4,11 @@ function mostrarFilmes (filmes) {
 }
 
 function verificarRepetidos(filmes, verificarFilme) {
-
     if (filmes.includes(verificarFilme)) {
         alert("Filme já adicionado!");
         return true
-    } else {
-        return false
-    }
+    } 
+    return false
 }
 
 var listaFilmes = [];
@@ -18,10 +16,10 @@ var listaFilmes = [];
 function addFilme() {
     var filmeAdicionado = document.getElementById("filmeAdicionado").value;
     if (verificarRepetidos([...listaFilmes], filmeAdicionado)) {
+        document.getElementById("filmeAdicionado").value = "";
         return;
-    } else {
-        listaFilmes.push(filmeAdicionado);
-    }
+    } 
+    listaFilmes.push(filmeAdicionado);
     mostrarFilmes(listaFilmes);
     document.getElementById("filmeAdicionado").value = "";
 } 
